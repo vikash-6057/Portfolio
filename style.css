@@ -9,7 +9,7 @@ a {
 }
 /* Introduction Style */
 #intro {
-  background-image: url(./images/1615185663146.png);
+  background-image: url(./images/background.jpeg);
   background-size: cover;
   background-position: top center;
   position: relative;
@@ -37,7 +37,7 @@ a {
   height: 100%;
   width: 100%;
   background-color: darkslategray;
-  opacity: 0;
+  opacity: .4;
   z-index: -1;
 }
 #intro h1 {
