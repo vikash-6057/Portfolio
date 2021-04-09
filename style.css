@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+/* Introduction Style */
+#intro {
+  background-image: url(./images/background2.png);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+.container {
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#intro .intro {
+  max-width: 70%;
+  padding: 0 30%;
+  margin: 0 auto;
+  justify-content: flex-start;
+}
+#intro ::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: darkslategray;
+  opacity: 0;
+  z-index: -1;
+}
+#intro h1 {
+  display: block;
+  width: fit-content;
+  font-family: 'Dancing Script', cursive;
+  font-size: 4rem;
+  position: relative;
+  color: transparent;
+  animation: text_reveal 1s ease forwards;
+  animation-delay: 1.5s;
+}
+#intro h1:nth-child(1) {
+  animation-delay: 1.5s;
+}
+#intro h1:nth-child(2) {
+  animation-delay: 2.5s;
+}
+#intro h1:nth-child(3) {
+  animation-delay: 3.5s;
+}
+#intro h1:nth-child(1) span {
+  animation-delay: 1s;
+}
+#intro h1:nth-child(2) span {
+  animation-delay: 2s;
+}
+#intro h1:nth-child(3) span {
+  animation-delay: 3s;
+}
+#intro h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: crimson;
+  animation: text_animator 1s ease;
+  animation-delay: 0.5s;
+}
+/* animation for hello*/
+@keyframes text_animator {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes text_reveal {
+  100% {
+    color: white;
+  }
+}
+
+#intro .btn {
+  display: inline-block;
+  text-transform: uppercase;
+  border: 2px solid crimson;
+  color: white;
+  padding: 10px;
+  background-color: transparent;
+  transition: 0.8s ease all;
+}
+#intro .btn:hover {
+  background-color: crimson;
+}
+
+/* P tag */
+p{
+  font-size: 1.5rem;
+}
+/* Services Style */
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.service-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 50px;
+}
+.section-title {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: rgb(86, 7, 7);
+}
+
+/* Service Bottom */
+
+.service-bottom {
+  display: flex;
+  max-width: 80%;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: indianred; */
+  flex-wrap: wrap;
+}
+.service-item {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid crimson;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px crimson, 0 4px 8px rgba(0, 0, 0, 1);
+  width: 40%;
+  height: 400px;
+  padding: 40px;
+  margin: 40px;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(209, 52, 13, 0.219);
+}
