@@ -28,8 +28,8 @@ a {
   justify-content: center;
 }
 #intro .intro-top{
- /*   min-height: 100vh;
-  min-width: 100%; */
+  min-height: 100vh;
+  min-width: 100%;
 
   
   padding-top: 50%;
