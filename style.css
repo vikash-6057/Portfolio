@@ -28,12 +28,9 @@ a {
   justify-content: center;
 }
 #intro .intro-top{
- /*   min-height: 100vh;
-  min-width: 100%; */
-
-  
-  padding-top: 50%;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
 }
 #intro .intro {
@@ -223,6 +220,7 @@ p {
 #about .container {
   min-height: 600px;
   align-items: center;
+  overflow-x: hidden;
 }
 #about .about {
   flex-direction: column;
@@ -296,6 +294,7 @@ p {
 	min-height: 8vh;
 	background-color: rgba(31, 30, 30, 0.24);
 	transition: .3s ease background-color;
+  overflow: hidden;
 }
 #header .nav-bar {
 	display: flex;
@@ -305,6 +304,7 @@ p {
 	height: 100%;
 	max-width: 1300px;
 	padding: 0 10px;
+  overflow-x: hidden;
 }
 #header .nav-list ul {
 	list-style: none;
@@ -321,9 +321,11 @@ p {
 	z-index: 1;
 	overflow-x: hidden;
 	transition: .5s ease left;
+
 }
 #header .nav-list ul.active {
 	left: 0%;
+  overflow-x: hidden;
 }
 #header .nav-list ul a {
 	font-size: 2.5rem;
@@ -338,6 +340,7 @@ p {
 #header .nav-list ul a::after {
 	content: attr(data-after);
 	position: absolute;
+  overflow-x: hidden;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
@@ -418,9 +421,9 @@ p {
 		opacity: 0;
 		transform: scale(1.4);
 	}
-} */
+}
 /* End Header section */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 780px) {
   p{
     font-size: 1rem;
   }
