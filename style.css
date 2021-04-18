@@ -7,6 +7,7 @@
 
 body {
   background-image: linear-gradient(transparent, #2d4855);
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none;
@@ -108,7 +109,7 @@ a {
 	height: 100%;
 	width: 100%;
 	border-radius: 50%;
-	border: 3px solid white;
+	border: 3px solid crimson;
 	animation: hamburger_puls 1s ease infinite;
 }
 #header .hamburger .bar {
@@ -154,7 +155,7 @@ a {
   min-width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
 #intro ::after {
@@ -229,47 +230,44 @@ a {
   text-transform: uppercase;
   border: 2px solid crimson;
   color: white;
-  padding: 10px;
+  padding: 1em;
+  font-size: 1rem;
+  margin-top: 1ch;
   background-color: transparent;
   transition: 0.8s ease all;
 }
-#intro .btn:hover {
+.btn:hover {
   background-color: crimson;
 }
-
-/* P tag */
-p {
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: 1.5rem;
-  color: black;
-}
-/* Services Style */
+/* Skills Style */
 #services {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-start;
+  align-items: center;
+  padding-top: 8vh;
 }
 .section-heading {
   text-transform: uppercase;
   font-size: 2rem;
   color: rgb(86, 7, 7);
+  padding: 1em;
 }
 .section-title {
   text-transform: capitalize;
-  margin-bottom: 10px;
+  margin-bottom: 1ch;
+  margin-top: 1ch;
   color: #2f4b56;
+  padding-left: 1ch;
+  padding-right: 1ch;
 }
 
 
-/* Service Bottom */
-
 .service-bottom {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 .service-item {
   display: flex;
@@ -277,13 +275,19 @@ p {
   border: 2px solid crimson;
   border-radius: 20px;
   box-shadow: 4px 4px 4px crimson, 0 4px 8px rgba(0, 0, 0, 1);
-  min-width: 40%;
-  padding: 2%;
-  margin: 2%;
-  justify-content: flex-start;
+  min-width: 100%;
+  margin-top: 2rem;
+  margin-left: 1ch;
+  margin-right: 1ch;
+  justify-content: center;
   align-items: center;
   background-color: rgba(209, 52, 13, 0.219);
   overflow: hidden;
+}
+
+li{
+  padding-top: 1ch;
+  padding-bottom: 1ch;
 }
 /* Projects Styling */
 #projects {
@@ -291,8 +295,15 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  padding-top: 8vh;
 }
 .project-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.project-section{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -302,47 +313,70 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   overflow: hidden;
 }
 .project-blog img {
   height: auto;
   max-width: 100%;
+  padding-left: 1ch;
+  padding-right: 1ch;
+  margin-top: 2rem;
+  border-radius: 20px;
 }
-
+.project-content{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid crimson;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px crimson, 0 4px 8px rgba(0, 0, 0, 1);
+  min-width: 95%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 1ch;
+  margin-right: 1ch;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(209, 52, 13, 0.219);
+  overflow: hidden;
+}
+.project-content li{
+  list-style: none;
+  padding-left: 2ch;
+  padding-right: 2ch;
+}
 #about{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  padding-top: 8vh;
 }
 .about-top {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
 }
-.about .btn {
-  color: crimson;
-}
-.about .btn:hover {
-  background-color: crimson;
-  color: white;
+.about-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
 }
 .about-left img {
   height: auto;
-  max-width: 100%;
-  /* border: 2px solid crimson;
-  border-radius: 20px;
-  box-shadow: 4px 4px 4px crimson, 0 4px 8px rgba(0, 0, 0, 1); */
+  max-width:350px;
+  border-radius: 50%;
 }
 .about-right {
   display: flex;
   border: 2px solid crimson;
   border-radius: 20px;
   box-shadow: 4px 4px 4px crimson, 0 4px 8px rgba(0, 0, 0, 1);
-  padding: 2%;
-  margin: 1%;
+  max-width: 70ch;
+  padding: 2ch;
+  margin: 2em;
   justify-content: flex-start;
   align-items: center;
   background-color: rgba(209, 52, 13, 0.219);
@@ -374,9 +408,30 @@ p {
 
 @media only screen and (min-width: 992px) {
   /* For desktop: */
+
+  #intro h1{
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+
+
+/* Service Bottom */
+
+.service-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  min-width: 40%;
+}
  .social{
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
   }
   .social-item{
@@ -385,10 +440,19 @@ p {
   .about-top {
   flex-direction: row;
 }
-.project-item{
+.project-section{
   flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 5ch;
+  margin-bottom: 5ch;
 }
-
+.project-content{
+  min-width: 60%;
+}
+.project-blog img{
+  height: 24ch;
+}
 #header .hamburger {
 		display: none;
 	}
